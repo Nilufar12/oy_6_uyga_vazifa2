@@ -21,15 +21,40 @@ from django.http import HttpResponse, HttpRequest
 
 
 def index(request):
-    return HttpResponse('<h2><a href="/about/">Sahifamizga xush kelibsiz</a></h2>')
+    return HttpResponse(
+        '<h2 style="color: pink;'
+        'text-align: center;'
+        'background-color: lightblue;'
+        'text-shadow: 2px 2px pink;">'
+            '<a href="/about/"><i>Sahifamizga xush kelibsiz''</i></a>'
+        '</h2>'
+        '<div style="text-align: center";>'
+            '<img src="https://www.w3schools.com/css/img_5terre.jpg";>'
+        '</div>')
 
 
 def about(request):
-    return HttpResponse('<h1><a href="/services/">Biz haqimizda</a></h1>')
+    return HttpResponse(
+        '<h1 style="text-align: center;'
+        'text-shadow: 2px 2px light grey;">'
+        '<a href="/services/">Biz haqimizda</a></h1>'
+        '<div style="text-align: center";>'
+            '<img src="https://www.w3schools.com/css/img_forest.jpg";>'
+        '</div>'
+    )
 
 
 def services(request):
-    return HttpResponse('<h1><a href="/detail/">Bizda quyidagi hizmatlar mavjud</a></h1>')
+    return HttpResponse(
+        '<h1 style="text-align: center;">'
+        '<a href="/detail/">Bizda quyidagi hizmatlar mavjud</a></h1>'
+        '<div style="text-align: center;'
+             'border: 5px solid #ff69b4; '
+             'padding: 15px;'
+             'border-image: url(border.png) 30 round;">'
+             '<img src="https://www.w3schools.com/css/img_lights.jpg";>'
+        '</div>'
+    )
 
 
 def detail(request):
